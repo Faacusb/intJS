@@ -78,12 +78,17 @@ body{
     font-size: 32px
 }
 
+.iconoMenuHamb{display: none;}
 
 /* Menu hamburguesa */
 .header__navbar i{
     font-size: 36px;
     display: none;
     
+}
+
+.iconoMenuHamb{
+    width: 50px;
 }
 
 #toggle-menu{
@@ -513,6 +518,9 @@ justify-content: space-evenly;
         width: 100%;
     }
 
+    .iconoMenuHamb{
+        display: block;
+    }
    
     .header__navbar ul{
         background: brown;
@@ -610,6 +618,10 @@ justify-content: space-evenly;
         width: 100%;
     }
 
+
+    .iconoMenuHamb{
+        display: block;
+    }
    
     .header__navbar ul{
         background: brown;
@@ -626,7 +638,12 @@ justify-content: space-evenly;
         display: block;
     }
 
+
+
     #toggle-menu:checked ~ .navbar-list{
+        display: flex;
+    }
+    .toggleMenu{
         display: flex;
     }
 
