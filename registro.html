@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles-form.css">
+    <title>Priamo Cafe registro</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img">
+            <img src="./assets/img/logo.png" class="header--logo" alt="logo" />
+        </div>
+        <nav class="header__navbar">
+            <ul class="navbar-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Inicio Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cafe-registro">
+            <div class="container">
+            <form class="form-register">
+                <h1>Priamo Cafe</h1>
+                <h2>Complete el formulario de registro</h2>
+                <div class="form-nombre">
+                    <input type="text" required placeholder="Ingrese su nombre">
+                    <input type="text" required placeholder="Ingrese su apellido">
+                </div>
+                <input class="correo-register" type="email" required placeholder="Ingrese su correo electrónico" >
+                <input class="contraseña" type="password" required placeholder="Ingrese su contraseña">
+                <div class="fecha-nacimiento">
+                <p>Ingrese su fecha de nacimiento</p>
+                <input type="date">
+                </div>
+                <input class="telefono" type="tel" required placeholder="Ingrese su numero de telefono">
+                <div class="genero">
+                    <p>Sexo</p>
+                    <select name="sexo" id="sexo">
+                        <option value="sexo">
+                            Hombre
+                        </option>
+                        <option value="sexo">
+                            Mujer
+                        </option>
+                        <option value="sexo">
+                            Personalizado
+                        </option>
+                    </select>
+                </div>
+                <div class="terminos">
+                <input type="checkbox" id="condiciones" name="condiciones"/> <label for="condiciones">Estoy de acuerdo con los <a href="" class="enlace-terminos">términos y condiciones</a></label>
+            </div>
+            
+                <input class="btn-submit btn-registro" type="submit">
+            
+            </form>
+        </div>
+        </section>
+    </main>
+</body>
+</html>

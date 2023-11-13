@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Habibi&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'roboto';
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #432818;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+} 
+
+
+.header-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-left: 15px;
+}
+.header--logo{
+    height: 85%;
+    border-radius: 50%;
+}
+
+.header__navbar{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.navbar-list{
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list a{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.navbar-list a:hover{
+    font-size: 32px;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+
+/* Form login */
+
+#cafe-login{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;    
+    flex-wrap: wrap;
+    font-size: 16px;
+    
+    padding: 50px 0;
+}
+
+.form-login{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #dda15e;
+    border-radius: 10px;
+    box-shadow: rgba(126, 126, 126, 0.2) 0px 1px 6px, rgba(134, 134, 134, 0.2) 1px 1px 8px;
+}
+.inputss{ 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-login, .form-register h2{
+    font-size: 30px;
+   color: #432818;}
+
+.titulo-login, .form-register h1{
+    font-size: 40px;
+    color: #432818;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    font-size: 16px;
+    color: black;
+}
+
+.form-login input{
+    padding: 15px;
+}
+
+.form-login, .form-register a {
+    color: #432818;
+}
+
+.btn-submit{
+    background: #432818;
+    width: 50%;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+a {
+    color: #432818;;
+}
+
+/* Form Registro */
+
+#cafe-registro{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;    
+    flex-wrap: wrap;
+}
+.container{
+    display: flex;
+    width: 800px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.form-register{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: #dda15e;
+    border-radius: 10px;
+    box-shadow: rgba(126, 126, 126, 0.2) 0px 1px 6px, rgba(134, 134, 134, 0.2) 1px 1px 8px;
+}
+
+input{
+    padding: 10px;
+}
+
+.form-nombre input{
+    padding: 10px;
+    width: 47%;
+}
+
+.correo-register{
+    width: 61%;
+    padding: 10px;
+
+}
+.contraseña{
+    width: 61%;
+}
+.telefono{
+    width: 61%;
+}
+
+.fecha-nacimiento{
+    width: 61%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fecha-nacimiento p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.genero{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.genero select{
+    padding: 10px;
+}
+
+.btn-registro{
+    margin-bottom: 20px;
+}
+
+/* Media Query Tablet */
+
+@media (max-width: 768px){
+body{
+        width: 100%; 
+}
+
+.container{
+    width: 100%;
+}
+/* Login */
+.form-login{
+    width: 70%;
+    gap: 40px;
+}
+.inputss{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.inputss input{
+    width: 60%;
+}
+
+input .form-login {
+    width: 50%;
+}
+
+/* Registro */
+.form-register{
+    width: 80%;
+    height: auto;
+}
+.form-register h2{
+    font-size: 28px;
+}
+.form-nombre{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+
+}
+.form-nombre input{
+    width: 61%;
+}
+
+ 
+}
+
+@media (max-width: 576px){
+    /* Login */
+    .form-login{
+        width: 80%;
+    }
+    .inputss{
+        width: 77%;
+    }
+
+    .inputss input{
+        width: 100%;
+    }
+    #cafe-login p{
+        width: 70%;
+    }
+
+    /* Registro */
+   .terminos{
+    width: 70%;
+   }
+   .genero select{
+    width: 67%;
+   }
+   .form-register h2{
+    font-size: 26px;
+    width: 70%;
+}
+.form-nombre input{
+    width: 70%;
+}
+.correo-register{
+    width: 70%;
+}
+.contraseña{
+    width: 70%;
+}
+.fecha-nacimiento{
+    width: 70%;
+}
+
+.telefono{
+    width: 70%;
+}
+.genero{
+    width: 100%;
+}
+.genero select {
+    width: 54%;
+}
+
+   }
