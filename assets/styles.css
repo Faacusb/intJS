@@ -297,6 +297,18 @@ justify-content: space-evenly;
     margin: 0 auto;
     padding-top: 27px;
     background: #bb9457;
+    display: flex;
+}
+.aside-shop{
+background-color: beige;
+display: flex;
+padding-top: 20px;
+padding-left: 10px;
+}
+.nav-shop{
+display: flex;
+flex-direction: column;
+gap: 15px;
 }
 
 .shop-contain{
