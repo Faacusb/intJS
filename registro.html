@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles-form.css">
+    <title>Priamo Cafe registro</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img">
+            <img src="./assets/img/logo.png" class="header--logo" alt="logo" />
+        </div>
+        <nav class="header__navbar">
+            <ul class="navbar-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Inicio Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cafe-registro">
+            <div class="container">
+                
+                <form class="form__container" id="register-form" novalidate>
+                <h1 class="titulo-registro">Priamo Cafe</h1>
+                <p class="form__title">Registate</p>
+
+                    <!-- Nombre -->
+
+                <div class="form__field">
+                    <input type="text" id="name" class="form__input" placeholder="Nombre">
+                    <small></small>
+                </div>
+                
+                <!-- Apellido -->
+
+                <div class="form__field">
+                    <input type="text" id="lastName" class="form__input" required placeholder="Apellido">
+                    <small></small>
+                </div>
+                <!-- Apellido -->
+                <!-- Correo -->
+
+                <div class="form__field">
+                    <input class="form__input" id="email" type="email" required placeholder="Email" >
+                    <small></small>
+                </div>
+                <!-- Correo -->
+
+                <!-- Contraseña -->
+
+                <div class="form__field">
+                    <input class="form__input" id="password" type="password" required placeholder="Contraseña">
+                    <small></small>
+                </div>
+                <!-- Contraseña -->
+
+                <!-- Telefono -->
+                
+                <div class="form__field">
+                    <input type="text" class="form__input" id="phone" placeholder="Telefono">
+                    <small></small>
+                </div>
+                <!-- Telefono -->
+                
+                <div class="terminos">
+                <input type="checkbox" id="condiciones" name="condiciones"/> <label for="condiciones">Estoy de acuerdo con los <a href="" class="enlace-terminos">términos y condiciones</a></label>
+            </div>
+                <input type="submit" class="form__submit__btn" value="Registrarse">
+                <p class="form--redirect">
+                    Tenes cuenta? 
+                    <a class="link--gradient" href="login.html">Iniciá Sesión</a>
+                </p>
+                
+                
+            
+                
+            
+            </form>
+        </div>
+        </section>
+        <script src="./assets/register.js"></script>
+    </main>
+</body>
+</html>
