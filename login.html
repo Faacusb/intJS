@@ -21,20 +21,31 @@
 
     <main>
       <section id="cafe-login">
-        <div class="container">
+
         <form class="formLogin">
             <h1 class="titulo-login">Priamo Cafe</h1>
             <h2>Inicia Sesion</h2>
-            <div class="inputss">
-            <input type="text" placeholder="Ingresa tu correo electrónico.." autofocus required>
-            <input type="password" placeholder="Ingresa tu contraseña.." required>
-          </div>
-            <input class="btn-submit" type="submit">
-            <p>No estas registrado? <a href="registro.html">Registrate acá</a></p>
-        <form>
+
+            <!-- Email -->
+            <div class="form__field">
+               <input id="email" type="text" placeholder="Ingresa tu correo electrónico.." autofocus >
+            </div>
+            <!-- /Email -->
+
+            <!-- Contraseña -->
+           <div class="form__field">
+            <input id="password" type="password" placeholder="Ingresa tu contraseña.." >
+           </div>
+            
+          <!-- /Contraseña -->
+
+          <small id="form__error"></small>
+          
+          <p>No estas registrado? <a href="registro.html">Registrate acá</a></p>
+          <input class="btn-submit" type="submit">
 
         </form>
-      </div>
+    
       </section>
     </main>
     <script src="./login.js"></script>

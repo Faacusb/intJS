@@ -110,15 +110,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
 /* header */
 .header{
     position: sticky;
@@ -197,11 +188,11 @@ body{
     border-radius: 10px;
     box-shadow: rgba(126, 126, 126, 0.2) 0px 1px 6px, rgba(134, 134, 134, 0.2) 1px 1px 8px;
 }
-.inputss{ 
+/* .inputss{ 
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
+} */
 
 .formLogin, .form-register h2{
     font-size: 30px;
@@ -353,17 +344,6 @@ body{
     width: 70%;
     gap: 40px;
 }
-.inputss{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.inputss input{
-    width: 60%;
-}
 
 input .formLogin {
     width: 50%;
@@ -397,13 +377,8 @@ input .formLogin {
     .formLogin{
         width: 80%;
     }
-    .inputss{
-        width: 77%;
-    }
-
-    .inputss input{
-        width: 100%;
-    }
+  
+  
     #cafe-login p{
         width: 70%;
     }
