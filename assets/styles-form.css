@@ -185,7 +185,7 @@ body{
     padding: 50px 0;
 }
 
-.form-login{
+.formLogin{
     width: 600px;
     height: 600px;
     display: flex;
@@ -203,7 +203,7 @@ body{
     gap: 16px;
 }
 
-.form-login, .form-register h2{
+.formLogin, .form-register h2{
     font-size: 30px;
    color: #432818;}
 
@@ -219,11 +219,11 @@ p{
     color: black;
 }
 
-.form-login input{
+.formLogin input{
     padding: 15px;
 }
 
-.form-login, .form-register a {
+.formLogin, .form-register a {
     color: #432818;
 }
 
@@ -349,7 +349,7 @@ body{
 
 
 /* Login */
-.form-login{
+.formLogin{
     width: 70%;
     gap: 40px;
 }
@@ -365,7 +365,7 @@ body{
     width: 60%;
 }
 
-input .form-login {
+input .formLogin {
     width: 50%;
 }
 
@@ -394,7 +394,7 @@ input .form-login {
 
 @media (max-width: 576px){
     /* Login */
-    .form-login{
+    .formLogin{
         width: 80%;
     }
     .inputss{
