@@ -12,7 +12,7 @@ body{
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
+
 .form__container {
     display: flex;
     flex-direction: column;
@@ -119,8 +119,6 @@ body{
 
 
 
-=======
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
 /* header */
 .header{
     position: sticky;
@@ -209,11 +207,7 @@ body{
     font-size: 30px;
    color: #432818;}
 
-<<<<<<< HEAD
 .titulo-login h1{
-=======
-.titulo-login, .form-register h1{
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
     font-size: 40px;
     color: #432818;
 }
@@ -259,11 +253,8 @@ a {
 }
 .container{
     display: flex;
-<<<<<<< HEAD
     flex-direction: column;
     
-=======
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
     width: 800px;
     height: auto;
     align-items: center;
@@ -274,11 +265,7 @@ a {
 }
 .form-register{
     width: 600px;
-<<<<<<< HEAD
     height: auto;
-=======
-    height: 600px;
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
     display: flex;
     padding: 20px 0;
     flex-direction: column;
@@ -294,11 +281,7 @@ input{
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .form-nombre, form-apellido input{
-=======
-.form-nombre input{
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
     padding: 10px;
     width: 47%;
 }
@@ -349,7 +332,6 @@ body{
 }
 
 .container{
-<<<<<<< HEAD
     width: 60%;
 }
 
@@ -366,10 +348,6 @@ body{
 }
 
 
-=======
-    width: 100%;
-}
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
 /* Login */
 .form-login{
     width: 70%;
@@ -392,19 +370,11 @@ input .form-login {
 }
 
 /* Registro */
-<<<<<<< HEAD
 .form__container{
     width: 80%;
     height: auto;
 }
 .form__container h2{
-=======
-.form-register{
-    width: 80%;
-    height: auto;
-}
-.form-register h2{
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
     font-size: 28px;
 }
 .form-nombre{
@@ -458,13 +428,7 @@ input .form-login {
 .contraseña{
     width: 70%;
 }
-<<<<<<< HEAD
 
-=======
-.fecha-nacimiento{
-    width: 70%;
-}
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
 
 .telefono{
     width: 70%;

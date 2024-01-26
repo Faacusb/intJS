@@ -4,17 +4,10 @@ const iconMenu = document.querySelector(".iconoMenuHamb"),
 // Menu Hamburguesa
 const toggle_menu = () => {
   menu.classList.toggle("toggleMenu");
-<<<<<<< HEAD
   
 };
 
 iconMenu.addEventListener("click", toggle_menu);
-=======
-  console.log("holi");
-};
-
-
->>>>>>> a0da4a166e2958625d5f1b8341020deb60f26b67
 
 const cafes = [
   {
