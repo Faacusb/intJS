@@ -2,6 +2,9 @@ const loginForm = document.querySelector(".formLogin");
 const emailInput = document.getElementById("email");
 const passInput = document.getElementById("password");
 const errorMessage = document.getElementById("form__error");
+const logOutButton = document.getElementById("logOut");
+
+
 
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -59,11 +62,14 @@ const isValidAccount = () =>{
         return;
     }
 
-    alert("Ya estas en linea")
+    alert("Iniciaste sesión")
     valid = true;
+
     errorMessage.textContent = "";
     return valid;
+    
 }
+
 
 
 const login = (e) => {
@@ -73,12 +79,20 @@ const login = (e) => {
         const usuario = usuarios.find((usuario) => usuario.email === emailInput.value.trim());
         saveToSessionStorage(usuario);
         window.location.href ="/index.html";
+        
+        
     }
 
 };
 
+
+
+
 const init = () => {
     loginForm.addEventListener('submit', login);
+   
+    
+
 
 };
 

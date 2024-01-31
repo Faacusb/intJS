@@ -29,7 +29,12 @@
     </nav>
     <div class="user__login">
       <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #fafcff;"></i></a>
-      <a href="login.html"><i class="fa-solid fa-user" style="color: #e6e9ef"></i></a>
+      <a href="login.html" id="userIcon"><i class="fa-solid fa-user" style="color: #e6e9ef"></i></a>
+
+      <button id="logOut">
+        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i>
+      </button>
+      
 
     </div>
   </header>
@@ -165,15 +170,21 @@
     </section>
 
     <section id="shop">
-      <aside class="aside-shop">
-        <nav class="nav-shop">
-          <h2>Tipos de café</h2>
-          <li><a href="#">Todos los café</a></li>
-          <li><a href="#">Solo café</a></li>
-          <li><a href="#">Cafe con leche agregada</a></li>
-          <li><a href="#">Con chocolate</a></li>
-        </nav>
-      </aside>
+
+      <div class="categorias">
+        <div class="categorias-contain">
+        <button class="category active">Todos los café</button>
+        <button class="category ">Solo café</button>
+        <button class="category ">Con leche</button>
+        <button class="category">Con crema</button>
+        <button class="category">Con chocolate</button>
+        <button class="category">Con alcohol</button>
+        </div>
+      </div>
+
+      <!-- productos a renderizar -->
+
+
       <div id="contenedor-productos" class="shop-contain">
         <!-- <div class="shop-card">
           <div class="img-contain-shop">
@@ -296,6 +307,7 @@
         </div> -->
 
       </div>
+      <button class="verMas">Ver Más</button>
     </section>
 
     <section id="contacto">
@@ -371,6 +383,9 @@
       Reservados.
     </p>
   </footer>
+  <script src="/data.js"></script>
   <script src="main.js"></script>
+  
+  
 </body>
 </html>

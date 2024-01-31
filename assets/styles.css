@@ -62,6 +62,21 @@ body{
     align-items: center;
     justify-content: center;
 }
+#logOut{
+    
+    background-color: transparent;
+    width: fit-content;
+}
+
+#logOut {
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+  
+  #logOut:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+  }
+  
+
 
 .navbar-list a{
     text-align: center;
@@ -100,12 +115,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
 }
 .user__login i{
-    padding-right: 20px;
     font-size: 30px;
 
 }
+
+
+
+
 /* Section  portada */
 #portada{
     display: flex;
@@ -295,29 +315,24 @@ justify-content: space-evenly;
 #shop{
     /* max-width: 1200px; */
     margin: 0 auto;
-    padding-top: 27px;
+    padding-top: 5px;
     background: #bb9457;
     display: flex;
-}
-.aside-shop{
-background-color: beige;
-display: flex;
-padding-top: 20px;
-padding-left: 10px;
-height: 260px;
-border-radius: 10px;
-
-}
-.nav-shop{
-display: flex;
-flex-direction: column;
-gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
-.nav-shop a{
-    color: black;
-    font-size: 18px;
+.verMas {
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 3px;
 }
+.categorias-contain{
+    padding-top: 10px;
+}
+
 
 .shop-contain{
     margin: 0 auto;
@@ -356,23 +371,27 @@ gap: 15px;
     .precio-shop{
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 60%;
         align-items: center;
+        gap: 20px;
+    }
+    button.shop-btn{
+        width: 120px;
+        height: 37px;
+        color: #331a15;
+        border-width: 3px;
+        border-color: #331a15;
+        border-style: solid;
+        font-size: 24px;
+        background: rgba(210,180,140,1);
+        border-radius: 5px;
+        justify-content: center;
+        display: flex;
+        cursor: pointer;
+        
     }
 
-    .shop-btn span{
-    display: flex;
-    width: 100px;
-    height: 37px;
-    color: #331a15;
-    border-width: 3px;
-    border-color: #331a15;
-    font-size: 24px;
-    border-style: solid;
-    border-radius: 5px;
-    background: rgba(210,180,140,1);
-    justify-content: center;
-    }
+    
 .precio-shop p{
     font-size: 27px;
     font-weight: bold;
@@ -384,7 +403,7 @@ gap: 15px;
     align-items: center;
     justify-content: center;
     align-content: center;
-    background-color: grey;
+    background-color: navajowhite;
     border-radius: 5px;
 
 }
@@ -396,6 +415,34 @@ gap: 15px;
 .precio-shop a span:hover{
     background-color: whitesmoke;
 }
+
+
+
+.categorias{
+    max-width: 1200px;
+    /* background: red; */
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+
+.categorias button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categorias button:hover{
+    background-color: #331a15;
+    color: white;
+}
+
 
 /* Section contacto */
 #contacto{
@@ -619,6 +666,25 @@ gap: 15px;
     width: 330px;
 }
 
+/* Shop */
+
+.categorias{
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.categorias-contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    
+
+}
 
     
     /* Section Contacto */
@@ -751,6 +817,21 @@ gap: 15px;
         width: 100%;
     }
 
+    .categorias{
+       height: auto;
+       flex-direction: column;
+       gap: 5px;
+       
+    }
+
+    .categorias-contain{
+        align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    }
+
     .shop-contain{
         width: 100%;
     }
@@ -762,10 +843,16 @@ gap: 15px;
     .img-contain-shop{
         width: 85%;
     }
+    .texto-shop{
+        align-items: center;
+    }
+    .texto-shop p{
+        width: 90%;
+    }
 
     .precio-shop{
         gap: 20px;
-        width: 59%;
+        width: 75%;
     }
     .precio-shop a span:hover{
         background-color: rgba(210,180,140,1);
