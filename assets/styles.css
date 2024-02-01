@@ -122,6 +122,29 @@ body{
     font-size: 30px;
 
 }
+#cart{
+    cursor: pointer;
+}
+#cart:hover{
+        font-size: 32px   
+}
+.cart-bubble {
+    position: absolute;
+    top: 11px;
+    right: 9px;
+    text-align: center;
+    background: #432818;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1px;
+    border-radius: 50%;
+}
 
 
 
@@ -328,6 +351,7 @@ justify-content: space-evenly;
     font-size: 25px;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
 .categorias-contain{
     padding-top: 10px;

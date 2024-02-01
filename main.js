@@ -4,13 +4,45 @@ const iconMenu = document.querySelector(".iconoMenuHamb"),
 
 const toggle_menu = () => {
   menu.classList.toggle("toggleMenu");
+
 };
+
+
 
 // Login
 const logOutButton = document.getElementById("logOut");
 const userIcon = document.getElementById("userIcon");
 
 iconMenu.addEventListener("click", toggle_menu);
+
+const toggleUserIcon = () => {
+  const isLoggedIn = sessionStorage.getItem("activeUsuario");
+  if (isLoggedIn) {
+    userIcon.style.display = "none"; // Ocultar el botón userIcon
+  } else {
+    userIcon.style.display = "block"; // Mostrar el botón userIcon
+  }
+};
+
+const saveToSessionStorage = (usuario) => {
+  sessionStorage.setItem('activeUsuario', JSON.stringify(usuario));
+
+  // Despachar el evento de inicio de sesión exitoso
+  const loginSuccessEvent = new Event("loginSuccess");
+  document.dispatchEvent(loginSuccessEvent);
+}
+
+const toggleLogoutButton = () => {
+  const isLoggedIn = sessionStorage.getItem("activeUsuario");
+  if (isLoggedIn) {
+    logOutButton.style.display = "block"; // Mostrar el botón de logout
+  } else {
+    logOutButton.style.display = "none"; // Ocultar el botón de logout
+  }
+};
+
+
+
 
 // contenedor de productos
 const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -56,6 +88,8 @@ const logout = () => {
   if (window.confirm("Estas seguro que queres cerrar sesión?")) {
     sessionStorage.removeItem("activeUsuario");
     alert("Cerraste sesión");
+    toggleLogoutButton();
+    toggleUserIcon();
   }
 };
 
@@ -160,10 +194,12 @@ return element.classList.contains("category") && !element.classList.contains('ac
 
 
 
+
 const init = () => {
   iconMenu.addEventListener("click", toggle_menu);
   logOutButton.addEventListener("click", logout);
-
+  toggleUserIcon();
+  toggleLogoutButton();
   renderProducts(appState.productos[0]);
   verMasBtn.addEventListener("click", verMasProductos);
   categoriasContainer.addEventListener('click', applyFilter);

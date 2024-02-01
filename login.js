@@ -12,6 +12,8 @@ const saveToSessionStorage =(usuario) => {
     sessionStorage.setItem('activeUsuario', JSON.stringify(usuario))
 }
 
+
+
 // Funcion para validar que el campo no este vacio
 const isEmpty = (input) => {
     return !input.value.trim().length;
@@ -64,6 +66,7 @@ const isValidAccount = () =>{
 
     alert("Iniciaste sesión")
     valid = true;
+    
 
     errorMessage.textContent = "";
     return valid;
@@ -78,6 +81,9 @@ const login = (e) => {
     if(isValidAccount()){
         const usuario = usuarios.find((usuario) => usuario.email === emailInput.value.trim());
         saveToSessionStorage(usuario);
+        // Despachar el evento de inicio de sesión exitoso
+        const loginSuccessEvent = new Event("loginSuccess");
+        document.dispatchEvent(loginSuccessEvent);
         window.location.href ="/index.html";
         
         
