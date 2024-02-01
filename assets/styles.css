@@ -381,7 +381,7 @@ justify-content: space-evenly;
         color: #331a15;
         border-width: 3px;
         border-color: #331a15;
-        border-style: solid;
+        border-style: 1px;
         font-size: 24px;
         background: rgba(210,180,140,1);
         border-radius: 5px;
@@ -727,6 +727,10 @@ justify-content: space-evenly;
         display: block;
     }
 
+    .header--logo{
+        height: 75%;
+    }
+
 
 
    
@@ -893,4 +897,13 @@ justify-content: space-evenly;
     .contacto-contain-map-iframe{
         width: 100%;
     }
+}
+
+.active {
+    background: #331a15;
+    color: #f5f5f5;
+  }
+
+.hidden {
+    display: none;
 }

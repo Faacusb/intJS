@@ -7,7 +7,7 @@ const cafes = [
       "Sabor intenso y concentrado, servido en pequeñas cantidades.",
     precio: 900,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "cafe",
+    category: "cafe",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const cafes = [
       "Bebida suave y cremosa, ideal para quienes prefieren un café con menos intensidad.",
     precio: 1200,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const cafes = [
       "Bebida con una capa de espuma de leche y sabor equilibrado entre café y leche.",
     precio: 1300,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const cafes = [
       "Combinación deliciosa de café, chocolate y crema, ideal para los amantes del chocolate.",
     precio: 1500,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const cafes = [
     caracteristicas: "Café diluido hecho añadiendo agua caliente al espresso.",
     precio: 700,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "cafe",
+    category: "cafe",
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const cafes = [
     caracteristicas: 'Espresso "manchado" con una pequeña cantidad de leche.',
     precio: 1200,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const cafes = [
       'Postre italiano que consiste en una bola de helado "ahogada" con un espresso caliente.',
     precio: 1700,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con helado",
+    category: "cafe",
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ const cafes = [
       "Café similar al latte, pero con menos espuma y más concentrado.",
     precio: 1200,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 9,
@@ -85,7 +85,7 @@ const cafes = [
       "Espresso más corto y más concentrado que un espresso normal.",
     precio: 700,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "cafe",
+    category: "cafe",
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const cafes = [
       "Método de preparación de café tradicional en Turquía, donde se hierve café molido con agua y azúcar (opcional).",
     precio: 900,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "cafe",
+    category: "cafe",
   },
   {
     id: 11,
@@ -105,7 +105,7 @@ const cafes = [
       "Bebida que combina café, whiskey irlandés y azúcar, generalmente rematada con crema.",
     precio: 1500,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con alcohol",
+    category: "con alcohol",
   },
   {
     id: 12,
@@ -115,7 +115,7 @@ const cafes = [
       "Café negro con crema batida y a menudo espolvoreado con canela.",
     precio: 1000,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con crema",
+    category: "con crema",
   },
   {
     id: 13,
@@ -125,7 +125,7 @@ const cafes = [
       "Café hecho con partes iguales de café filtrado y leche caliente.",
     precio: 1000,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
   {
     id: 14,
@@ -135,7 +135,7 @@ const cafes = [
       'Espresso "cortado" con una pequeña cantidad de leche caliente.',
     precio: 900,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "cafe",
+    category: "cafe",
   },
   {
     id: 15,
@@ -144,7 +144,7 @@ const cafes = [
     caracteristicas: "Bebida que combina café y leche en proporciones iguales.",
     precio: 1000,
     imagen: "./assets/img/vaso-cafe-card.jpg",
-    categoria: "con leche",
+    category: "con leche",
   },
 ];
 
@@ -164,6 +164,9 @@ const dividirProductos = (size) => {
 
 const appState = {
   productos: dividirProductos(6),
+  currentproductIndex: 0,
+  limiteProductos: dividirProductos(6).length,
+  activeFilter: null,
 };
 
-console.log(appState);
+
