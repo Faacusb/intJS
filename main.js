@@ -7,6 +7,19 @@ const toggle_menu = () => {
 
 };
 
+//Seleccionar todos los elementos de la lista
+const navLinks = document.querySelectorAll(".navbar-list li a");
+
+// Función para cerrar el menú hamburguesa
+const closeMenu = () => {
+  menu.classList.remove("toggleMenu");
+};
+
+// Agregar un controlador de eventos clic a cada elemento de la lista
+navLinks.forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+
 
 
 // Login
@@ -40,6 +53,37 @@ const toggleLogoutButton = () => {
     logOutButton.style.display = "none"; // Ocultar el botón de logout
   }
 };
+
+// Carrito
+const cartBtn = document.querySelector(".cart-label");
+
+const dialogCart = document.getElementById("cartDialog");
+const closeDialog = document.getElementById('btnDialogClose')
+
+// const openDialog = () => {
+//   dialogCart.showModal();
+// };
+
+
+// const closeCartDialog = () => {
+//   dialogCart.close();
+// };
+
+const openDialog = () => {
+  if (!dialogCart.open) {
+    dialogCart.showModal();
+  }
+};
+
+const closeCartDialog = () => {
+  if (dialogCart.open) {
+    dialogCart.close();
+  }
+};
+
+// console.log(dialogCart)
+// console.log(closeDialog)
+
 
 
 
@@ -198,6 +242,8 @@ return element.classList.contains("category") && !element.classList.contains('ac
 const init = () => {
   iconMenu.addEventListener("click", toggle_menu);
   logOutButton.addEventListener("click", logout);
+  cartBtn.addEventListener("click", openDialog);
+  closeDialog.addEventListener("click", closeCartDialog);
   toggleUserIcon();
   toggleLogoutButton();
   renderProducts(appState.productos[0]);
