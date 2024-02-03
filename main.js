@@ -21,7 +21,14 @@ navLinks.forEach(link => {
   link.addEventListener("click", closeMenu);
 });
 
+const closeMenuAndRestoreAnimation = () => {
+  closeMenu();
+  iconMenu.classList.remove("active");
+};
 
+navLinks.forEach(link => {
+  link.addEventListener("click", closeMenuAndRestoreAnimation);
+});
 
 // Login
 const logOutButton = document.getElementById("logOut");
