@@ -102,6 +102,7 @@ const openDialog = () => {
     dialogCart.showModal();
     dialogCart.classList.add('show');
     document.body.classList.add('dim-background');
+    document.body.style.overflow = 'hidden';
   }
 };
 
@@ -110,6 +111,7 @@ const closeCartDialog = () => {
     dialogCart.close();
     dialogCart.classList.remove('show'); 
     document.body.classList.remove('dim-background');
+    document.body.style.overflow = '';
   }
 };
 

@@ -977,6 +977,7 @@ button.shop-btn {
 
   .cart-container{
     width: 240px;
+    max-height: 230px;
   }
   .cart-item{
     font-size: 14px;
