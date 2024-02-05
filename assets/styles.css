@@ -74,7 +74,7 @@ body {
 
 .iconoMenuHamb.active {
   transform: rotate(90deg);
-  background-color: #432818; 
+  background-color: #432818;
 }
 
 #logOut {
@@ -128,6 +128,11 @@ body {
 .user__login i {
   font-size: 30px;
 }
+.open-cart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
 #cart {
   cursor: pointer;
 }
@@ -155,10 +160,11 @@ dialog {
   margin: 0 auto;
 }
 #cartDialog {
+  position: relative;
   margin: 0 auto;
-  top: 15%;
+  top: 5%;
   background-color: #bb9457;
-  width: 280px;
+  width: 330px;
   /* codigo de trnsicion */
   opacity: 0; /* Estado inicial */
   transition: opacity 0.4s ease; /* Transición de opacidad */
@@ -173,6 +179,12 @@ dialog {
 
 #cartDialog.show {
   opacity: 1; /* Mostrar el diálogo */
+  width: 480px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 #cartDialog.close {
@@ -185,13 +197,22 @@ dialog {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 430px;
   align-items: center;
   gap: 30px;
   padding: 10px;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+}
+
+.cart-container {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+  width: 400px;
 }
 .divider {
   margin-top: 20px;
@@ -216,7 +237,83 @@ dialog {
 .btnCart {
   display: flex;
   gap: 30px;
+  margin-top: 20px;
+  position: relative;
 }
+
+.item-handler{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 20px;
+}
+.cart-item img{ 
+    width: 100px;
+}
+.item-info {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quantity-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 400;
+  }
+
+  .up {
+    border: 1px solid var(--electric);
+    cursor: pointer;
+    background-color: #432818;
+
+  }
+  
+  .down {
+    background-color: #432818;
+    border: 1px solid var(--electric);
+    cursor: pointer;
+  }
+  .btnCart button {
+    width: 100px;
+    /* height: 30px; */
+    color: #331a15;
+    border-width: 3px;
+    border-color: #331a15;
+    border-style: 1px;
+    font-size: 24px;
+    background: rgba(210, 180, 140, 1);
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center ;
+    /* cursor: pointer; */
+  }
+
+  .disabled {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+  }
+  .disabled:hover {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+  }
 
 /* Section  portada */
 #portada {
@@ -458,7 +555,7 @@ dialog {
 .precio-shop {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 68%;
   align-items: center;
   gap: 20px;
 }
@@ -874,6 +971,24 @@ button.shop-btn {
   #shop {
     width: 100%;
   }
+  .carrito{
+    width: 260px;
+  }
+
+  .cart-container{
+    width: 240px;
+  }
+  .cart-item{
+    font-size: 14px;
+    gap: 9px;
+  }
+  .cart-item img{
+    width: 30px;
+  }
+  .item-info{
+    width: 100px;
+  }
+
 
   .categorias {
     height: auto;
@@ -909,7 +1024,7 @@ button.shop-btn {
 
   .precio-shop {
     gap: 20px;
-    width: 75%;
+    width: 78%;
   }
   .precio-shop a span:hover {
     background-color: rgba(210, 180, 140, 1);
@@ -961,7 +1076,26 @@ button.shop-btn {
 .hidden {
   display: none;
 }
-.msjVacio{
-    font-size: 14px;
-    color: black;
+.msjVacio {
+  font-size: 14px;
+  color: black;
 }
+
+.add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    background-color:  #331a15;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+  }
+
+  .active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
